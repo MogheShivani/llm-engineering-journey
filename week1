@@ -1,0 +1,210 @@
+# Week 1 — LLM Foundations
+
+## Overview
+This week focused on understanding the fundamentals of Large Language Models (LLMs), how they are used in applications, and how developers interact with them using APIs.
+
+I also set up the development environment and created a small project to summarize website content using LLM APIs.
+
+
+## Development Setup
+
+Tools installed:
+
+- Cursor IDE
+- Python environment
+- API access for:
+  - OpenAI
+  - Gemini
+  - Ollama (local inference)
+
+Cursor helps in writing and understanding code faster using AI assistance.
+
+
+## What is a Large Language Model (LLM)?
+
+A Large Language Model is a neural network trained on large amounts of text data.
+
+LLMs work by predicting the next token (word or part of a word) based on previous tokens.
+
+Example:
+
+Input:
+"Machine learning is"
+
+Model prediction:
+"powerful"
+"important"
+"a subset of AI"
+
+Even though the training objective is simple, LLMs can perform complex tasks such as:
+- question answering
+- summarization
+- translation
+- coding
+- reasoning
+
+
+## ChatGPT vs API
+
+ChatGPT:
+- End-user interface
+- Used directly through browser or app
+
+API:
+- Allows developers to access the model programmatically
+- Used to build custom AI applications
+
+Example use cases of API:
+- chatbot
+- document summarizer
+- recommendation system
+- AI assistant
+
+
+## Model Ecosystem
+
+### Frontier Models (closed source)
+
+- GPT (OpenAI)
+- Claude (Anthropic)
+- Grok (xAI)
+
+These models:
+- provide high performance
+- are accessed via API
+- require internet connection
+
+
+### Open Source / Open Weight Models
+
+- Llama
+- Gemma
+- DeepSeek
+- Mixtral
+
+Advantages:
+- can run locally
+- more control
+- lower cost in long term
+
+Tradeoff:
+- may require good hardware
+
+
+## Ways to Use LLMs
+
+### 1. Chat Interface
+Example:
+ChatGPT
+
+Used for direct interaction.
+
+
+### 2. Cloud API
+Example:
+OpenAI API, Gemini API
+
+Allows integration into applications.
+
+
+### 3. Frameworks
+Example:
+LangChain
+
+Helps build complex AI pipelines.
+
+
+### 4. Managed AI Platforms
+Examples:
+- Azure ML
+- Amazon Bedrock
+
+Provide scalable infrastructure.
+
+### 5. Direct Inference (Local models)
+Example:
+Ollama
+
+Run models locally on computer.
+
+## Types of Models
+
+### Base Model
+
+- trained on raw text
+- predicts next token
+- not optimized for conversation
+
+### Instruction / Chat Model
+
+- trained to follow instructions
+- better at answering questions
+- used in chatbots
+
+### Reasoning Model
+
+- designed for step-by-step thinking
+- better performance on complex problems
+
+## Prompt Engineering Basics
+
+Prompts control model behavior.
+
+### System Prompt
+
+Defines:
+- role
+- tone
+- behavior
+
+Example:
+
+"You are a helpful AI tutor."
+
+
+### User Prompt
+
+Actual instruction or question.
+
+Example:
+
+"Explain neural networks simply."
+
+
+### Better prompts lead to better outputs.
+
+## Stateless Nature of LLMs
+
+LLMs do not remember past interactions.
+
+Each API call is independent.
+
+To maintain conversation context, we send previous messages again in each request.
+
+This creates the effect of memory.
+
+Example:
+
+messages = [
+    {"role": "system", "content": "..."},
+    {"role": "user", "content": "..."},
+    {"role": "assistant", "content": "..."}
+]
+
+
+## Limitations of LLMs
+
+- may generate incorrect answers
+- knowledge may not include latest events
+- may not be expert in specialized domains
+- output quality depends on prompt quality
+- token limits restrict context size
+
+
+## Key Takeaways
+
+- LLMs predict next token but show complex behavior
+- APIs allow developers to build AI applications
+- prompts significantly affect output quality
+- LLMs are stateless
+- different models have different strengths
